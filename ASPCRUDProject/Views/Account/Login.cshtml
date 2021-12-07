@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     <p style="color: white">
-                        @Html.ActionLink("Inscrire comme nouvel utilisateur", "Register")
+                        @Html.ActionLink("Inscrire comme nouvel utilisateur", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", style = "color: blue;" })
                     </p>
                     @* Activez ceci une fois que vous avez activé la confirmation du compte pour la fonctionnalité de réinitialisation du mot de passe
                         <p>
