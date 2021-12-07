@@ -1,13 +1,13 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mon application ASP.NET</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    @RenderSection("head", required: false)
 </head>
 <body>
     
@@ -18,6 +18,7 @@
 
         <br />
         @Html.Partial("_LoginPartial")
+        <!--
         <table>
             <tr>
                 <td>
@@ -70,38 +71,8 @@
 
 
         </table>
-        <asp:GridView ID="GridViewStudentDetails" DataKeyNames="StudentId" AutoGenerateColumns="false"
-                      runat="server" OnSelectedIndexChanged="GridViewStudentDetails_SelectedIndexChanged" Width="700">
-            <HeaderStyle BackColor="#0A9A9A" ForeColor="White" Font-Bold="true" Height="30" />
-            <AlternatingRowStyle BackColor="#f5f5f5" />
-            <Columns>
-                <asp:TemplateField>
-                    <ItemTemplate>
-                        <asp:LinkButton ID="lbtnSelect" runat="server" CommandName="Select" Text="Select" />
-                    </ItemTemplate>
-                </asp:TemplateField>
-                <asp:TemplateField HeaderText="First Name">
-                    <ItemTemplate>
-                        <asp:Label ID="lblFirstName" runat="server" Text='<%#Eval("FirstName") %>' />
-                    </ItemTemplate>
-                </asp:TemplateField>
-                <asp:TemplateField HeaderText="Last Name">
-                    <ItemTemplate>
-                        <asp:Label ID="lblLastName" runat="server" Text='<%#Eval("LastName") %>' />
-                    </ItemTemplate>
-                </asp:TemplateField>
-                <asp:TemplateField HeaderText="Register No.">
-                    <ItemTemplate>
-                        <asp:Label ID="lblRegisterNo" runat="server" Text='<%#Eval("RegisterNo") %>' />
-                    </ItemTemplate>
-                </asp:TemplateField>
-                <asp:TemplateField HeaderText="Department">
-                    <ItemTemplate>
-                        <asp:Label ID="lblDepartment" runat="server" Text='<%#Eval("Department") %>' />
-                    </ItemTemplate>
-                </asp:TemplateField>
-            </Columns>
-        </asp:GridView>
+        -->
+        
     </div>
 
     @Scripts.Render("~/bundles/jquery")

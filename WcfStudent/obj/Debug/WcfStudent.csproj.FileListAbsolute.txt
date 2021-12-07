@@ -5,3 +5,10 @@ C:\Users\yassi\Documents\GINF3\ASP.NET\Source\ASPCRUD\WcfStudent\obj\Debug\WcfSt
 C:\Users\yassi\Documents\GINF3\ASP.NET\Source\ASPCRUD\WcfStudent\obj\Debug\WcfStudent.csproj.CoreCompileInputs.cache
 C:\Users\yassi\Documents\GINF3\ASP.NET\Source\ASPCRUD\WcfStudent\obj\Debug\WcfStudent.dll
 C:\Users\yassi\Documents\GINF3\ASP.NET\Source\ASPCRUD\WcfStudent\obj\Debug\WcfStudent.pdb
+C:\Users\Firdaous\Desktop\Asp projet LV\ASPCRUD_1.0\WcfStudent\bin\WcfStudent.dll.config
+C:\Users\Firdaous\Desktop\Asp projet LV\ASPCRUD_1.0\WcfStudent\bin\WcfStudent.dll
+C:\Users\Firdaous\Desktop\Asp projet LV\ASPCRUD_1.0\WcfStudent\bin\WcfStudent.pdb
+C:\Users\Firdaous\Desktop\Asp projet LV\ASPCRUD_1.0\WcfStudent\obj\Debug\WcfStudent.csproj.AssemblyReference.cache
+C:\Users\Firdaous\Desktop\Asp projet LV\ASPCRUD_1.0\WcfStudent\obj\Debug\WcfStudent.csproj.CoreCompileInputs.cache
+C:\Users\Firdaous\Desktop\Asp projet LV\ASPCRUD_1.0\WcfStudent\obj\Debug\WcfStudent.dll
+C:\Users\Firdaous\Desktop\Asp projet LV\ASPCRUD_1.0\WcfStudent\obj\Debug\WcfStudent.pdb
