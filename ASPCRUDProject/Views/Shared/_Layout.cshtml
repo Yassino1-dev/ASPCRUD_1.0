@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mon application ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    
+       
+          
+    <div class="container body-content">
+        @RenderBody()
+
+        <br />
+        @Html.Partial("_LoginPartial")
+        <table>
+            <tr>
+                <td>
+                    Student Id :
+                </td>
+                <td>
+                    <input ID="txtStudentId" runat="server" Enabled="false" style="width: 300px" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    First Name :
+                </td>
+                <td>
+                    <input ID="txtFirstName" runat="server" style="width: 300px" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Last Name :
+                </td>
+                <td>
+                    <input ID="txtLastName" runat="server" style="width: 300px" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Register No. :
+                </td>
+                <td>
+                    <input ID="txtRegisterNo" runat="server" style="width: 300px" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Department :
+                </td>
+                <td>
+                    <input ID="txtDepartment" runat="server" style="width: 300px" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button id="ButtonInsert" value="Add" OnClick="InsertButton_Click">Add</button>
+                    <button id="ButtonUpdate" visible="false" value="Update" OnClick="InsertButton_Click">Update</button>
+                    <button id="ButtonDelete" visible="false" value="Delete" OnClick="DeleteButton_Click">Delete</button>
+                    <button id="ButtonCancel" visible="false" value="Cancel" OnClick="CancelButton_Click">Cancel</button>
+                </td>
+            </tr>
+
+
+        </table>
+        <asp:GridView ID="GridViewStudentDetails" DataKeyNames="StudentId" AutoGenerateColumns="false"
+                      runat="server" OnSelectedIndexChanged="GridViewStudentDetails_SelectedIndexChanged" Width="700">
+            <HeaderStyle BackColor="#0A9A9A" ForeColor="White" Font-Bold="true" Height="30" />
+            <AlternatingRowStyle BackColor="#f5f5f5" />
+            <Columns>
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:LinkButton ID="lbtnSelect" runat="server" CommandName="Select" Text="Select" />
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="First Name">
+                    <ItemTemplate>
+                        <asp:Label ID="lblFirstName" runat="server" Text='<%#Eval("FirstName") %>' />
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Last Name">
+                    <ItemTemplate>
+                        <asp:Label ID="lblLastName" runat="server" Text='<%#Eval("LastName") %>' />
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Register No.">
+                    <ItemTemplate>
+                        <asp:Label ID="lblRegisterNo" runat="server" Text='<%#Eval("RegisterNo") %>' />
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Department">
+                    <ItemTemplate>
+                        <asp:Label ID="lblDepartment" runat="server" Text='<%#Eval("Department") %>' />
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
